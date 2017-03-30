@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+		<link rel="stylesheet" href="../../public/assets/css/style.css" type="text/css">
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  		<!-- <script type="text/javascript" src="../../public/getextras.js"></script> -->
+		<script type="text/javascript" src="../../getextras.js"></script>
+
+
+
+
+
+
+
+		<title>Eat Da Burger III</title>
+	</head>
+
+	<body>
+
+		<div class="container-fluid">        
+			<div class="headline"><h1><center>Eat-Da-Burger!</center></h1></div>
+			<div class="nameorder">
+		<!-- 	// id created on main page
+			// once the first burger is ordered don't let the name field be editable, so all the orders
+			// go to the same person until the finish button is clicked -->
+				
+				<div class="form-group">
+  					<label class="control-label" for="focusedInput">Name</label>
+  					<input class="form-control" id="focusedInput" type="text" value="">
+  					<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+				</div>
+			</div>
+		    <div class="form-group">
+				<label class="col-lg-2 control-label">Patty Style:</label>
+  				<div class="radio col-lg-10 pattyType">
+      				<label> 
+        				<input type="radio" name="optionsRadios" id="optMeat1" value="Beef">
+        				Beef
+      				</label>
+      				<label>
+       					<input type="radio" name="optionsRadios" id="optMeat2" value="Turkey">
+       						Turkey
+   					</label>
+   					<label>
+	     					<input type="radio" name="optionsRadios" id="optMeat3" value="Veggie">
+       						Veggie
+   					</label>
+				</div>
+			</div>
+			<div class=row>
+				<label for="select" class="col-lg-2 control-label">Number of Patties</label>
+				<div class="col-md-2">
+					<select class="form-control" id="numberofPatties">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group row">
+              <label for="inputCheese" class="col-lg-2 control-label">Cheese</label>
+              <div class="col-lg-5">
+              <select multiple="" class="form-control" id="cheese">
+              </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputSauce" class="col-lg-2 control-label">Sauce</label>
+              <div class="col-lg-5">
+              <select class="form-control" id="sauce">
+              </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputMore" class="col-lg-2 control-label">Veggie</label>
+              <div class="col-lg-5">
+              <select class="form-control" id="veggie">
+              </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputExtra" class="col-lg-2 control-label">Extra</label>
+              <div class="col-lg-5">
+              <select multiple="" class="form-control" id="extra">
+              </select>
+              </div>
+            </div>
+
+ 			<div class="form-group row">
+				<label class="col-lg-2 control-label">Fries:</label>
+  				<div class="radio col-lg-10 fries">
+      				<label>
+	     				<input type="radio" name="optionsRadios" id="optFry0" value="None">
+       						None
+   					</label>
+      				<label> 
+        				<input type="radio" name="optionsRadios" id="optFry1" value="Small">
+        				Small
+      				</label>
+      				<label>
+       					<input type="radio" name="optionsRadios" id="optFry2" value="Medium">
+       						Medium
+   					</label>
+   					<label>
+	     				<input type="radio" name="optionsRadios" id="optFry3" value="Large">
+       						Large
+   					</label>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-lg-2 control-label">Drink:</label>
+  				<div class="radio col-lg-10 drinks">
+      				<label>
+	     				<input type="radio" name="optionsRadios" id="optDrink0" value="None">
+       						None
+   					</label>
+      				<label> 
+        				<input type="radio" name="optionsRadios" id="optDrink1" value="Small">
+        				Small
+      				</label>
+      				<label>
+       					<input type="radio" name="optionsRadios" id="optDrink2" value="Medium">
+       						Medium
+   					</label>
+   					<label>
+	     				<input type="radio" name="optionsRadios" id="optDrink3" value="Large">
+       						Large
+   					</label>
+				</div>
+			</div>
+
+
+
+
+
+
+
+    	</div> 
+
+    		<!-- 	<div class="form-group">
+        			<div class="checkbox">
+          				<label><input type="checkbox"> Checkbox </label>
+        			</div>
+      			</div>
+    		</div>
+    		    <div class="form-group">
+      <label class="col-lg-2 control-label">Radios</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            Option one is this
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Option two can be something else
+          </label>
+        </div>
+      </div>
+    </div> -->
+
+
+				
+	
+
+
+
+
+
+
+
+			<div class=burgerOrder>			
+				<form action="/create" method="POST">
+					<button type="submit" class="btn btn-info" id="order">Add Another Burger To This Order</button>
+				</form>
+				<form action="/createlast" method="POST">
+					<button type="submit" class="btn btn-info" id="finish">That is the Last Burger for This Order</button>
+
+				</form>
+			</div>	
+			<div>
+
+
+
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+			<!-- // Put modal here -->
+			<!-- //  Thank you for your order {name} you order is number {number} -->
+			<!-- order summary (at least number of burgers) -->
+			</div>		
+		</div>
+	</body>
+</html>
