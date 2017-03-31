@@ -22,26 +22,12 @@
 		<div class="container-fluid">        
 			<div class="headline"><h1><center>Eat-Da-Burger!</center></h1></div>
 			<div class="nameorder">
-		<!-- 	// id created on main page
-			// once the first burger is ordered don't let the name field be editable, so all the orders
-			// go to the same person until the finish button is clicked -->
-				
 				<div class="form-group">
   					<label class="control-label" for="focusedInput">Name</label>
   					<input class="form-control" id="focusedInput" type="text" value="">
   					<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
 				</div>
 			</div>
-
-
-
-
-
-
-
-
-
-
 			<div class="row">
 				<div fieldset id="group1">
 				    <div class="form-group">
@@ -77,58 +63,55 @@
 			</div>
 
 			<br><br>
+
 			<div class='row'>
 				<div class='col-md-12'>  
-						<div class='row'>
-							<div class='col-md-3'>
-						<!-- <div class="form-group"> -->
-								<div class="panel panel-primary">
-									<div class="panel-heading">Cheese</div>
-									<div class="panel-body">
-										<div class="checkbox" id="cheese">
-	 											<!-- populated by JS -->
-	        							</div>
-		              				</div>
-		              			</div>
-		              		</div>
-			              						
-							<div class='col-md-3'>
-					            <div class="panel panel-danger">
-									<div class="panel-heading">Sauce</div>
-									<div class="panel-body">
-					              		<div class="checkbox" id="sauce">
-	 											<!-- populated by JS -->
-	        							</div>
-					              </div>
-					            </div>
-					        </div>
-
-							<div class='col-md-3'>
-					             <div class="panel panel-success">
-									<div class="panel-heading">Veggies</div>
-									<div class="panel-body">
-					              		<div class="checkbox" id="veggie">
-	 											<!-- populated by JS -->
-	        							</div>
-					              	</div>
-					            </div>
-					       	</div>
-							<div class='col-md-3'>
-					             	<div class="panel panel-info">
-										<div class="panel-heading">Extras</div>
-										<div class="panel-body">
-	              							<div class="checkbox" id="extra">
-	 											<!-- populated by JS -->
-	        								</div>
-	              						</div>
-	            					</div>
-	            				</div>
+					<div class='row'>
+						<div class='col-md-3'>
+							<div class="panel panel-primary">
+								<div class="panel-heading">Cheese</div>
+								<div class="panel-body">
+									<div class="checkbox" id="cheese">
+ 											<!-- populated by JS -->
+        							</div>
+	              				</div>
+	              			</div>
+	              		</div>					
+						<div class='col-md-3'>
+				            <div class="panel panel-danger">
+								<div class="panel-heading">Sauce</div>
+								<div class="panel-body">
+				              		<div class="checkbox" id="sauce">
+ 											<!-- populated by JS -->
+        							</div>
+				              </div>
+				            </div>
+				        </div>
+						<div class='col-md-3'>
+				             <div class="panel panel-success">
+								<div class="panel-heading">Veggies</div>
+								<div class="panel-body">
+				              		<div class="checkbox" id="veggie">
+ 											<!-- populated by JS -->
+        							</div>
+				              	</div>
+				            </div>
+				       	</div>
+						<div class='col-md-3'>
+				             <div class="panel panel-info">
+								<div class="panel-heading">Extras</div>
+								<div class="panel-body">
+              						<div class="checkbox" id="extra">
+ 											<!-- populated by JS -->
+        							</div>
+              					</div>
+            				</div>
+            			</div>
 
 
-			       	</div>
-			       </div>
-			    </div>
-
+		       		</div>
+				</div>
+			</div>
 
 			<div class="row">
 				<div fieldset id="group2">
@@ -181,38 +164,37 @@
 				</div>
 			</div>
 
-			<div class=burgerOrder>			
-				<form action="/create" method="POST">
-					<button type="submit" class="btn btn-info" id="order">Add Another Burger To This Order</button>
-				</form>
-				<form action="/createlast" method="POST">
-					<button type="submit" class="btn btn-info" id="finish">That is the Last Burger for This Order</button>
+			<div class='row'>
+				<div class=burgerOrder>			
+					<form action="/create" method="POST">
+						<button type="submit" class="btn btn-info" id="order">Add Another Burger To This Order</button>
+					</form>
+				</div>
+				<div class='row'>
+					<form action="/createlast" method="POST">
+						<button type="submit" class="btn btn-info" id="finish">That is the Last Burger for This Order</button>
 
-				</form>
+					</form>
+				</div>
 			</div>	
 			<div>
 
+				<div class="modal">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h4 class="modal-title"></h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>One fine body…</p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 
-
-<!-- <div class="modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
-        <p>One fine body…</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-			
 			</div>		
 		</div>
 	</body>
