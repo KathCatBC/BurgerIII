@@ -2,8 +2,6 @@ $(document).ready(function() {
 
   $(".modal").hide()
 
-  
-  getExtras();
 
   var extraCheck = $("#extra");
   var veggieCheck =$("#veggie");
@@ -21,6 +19,18 @@ $(document).ready(function() {
   });
   
 
+    function createSelectRow(topping) {
+        var listOption = $("<div class='check-style'><input type='checkbox'/></div>");
+        listOption.attr("value", topping.id);
+        listOption.append("<label>" + topping.topping_name + "</label>");  
+        return listOption;
+    }
+
+
+    function getExtras() {
+        $.get("/api/extras", renderExtraList)
+    }
+
 
     function renderExtraList(data) {
         var rowsToAdd = [];
@@ -33,7 +43,13 @@ $(document).ready(function() {
         extraCheck.val();     // select is ready for the user to select a value
     }
 
-      function renderVeggieList(data) {
+  
+    function getVeggies() {
+        $.get("/api/veggies", renderVeggieList)
+    }
+
+
+    function renderVeggieList(data) {
         var rowsToAdd = [];
         for (var i = 0; i < data.length; i++) {
           console.log(data[i])
@@ -44,7 +60,13 @@ $(document).ready(function() {
         veggieCheck.val();     // select is ready for the user to select a value
     }
 
-      function renderCheeseList(data) {
+    
+    function getCheese() {
+        $.get("/api/cheese", renderCheeseList)
+    }
+
+
+    function renderCheeseList(data) {
         var rowsToAdd = [];
         for (var i = 0; i < data.length; i++) {
           console.log(data[i])
@@ -55,7 +77,13 @@ $(document).ready(function() {
         cheeseCheck.val();     // select is ready for the user to select a value
     }
 
-      function renderSauceList(data) {
+    
+    function getSauce() {
+        $.get("/api/sauce", renderSauceList)
+    }
+
+
+    function renderSauceList(data) {
         var rowsToAdd = [];
         for (var i = 0; i < data.length; i++) {
           console.log(data[i])
@@ -65,30 +93,6 @@ $(document).ready(function() {
         sauceCheck.append(rowsToAdd);   // add the new row to the selection option
         sauceCheck.val();     // select is ready for the user to select a value
     }
-
-    function createSelectRow(topping) {
-        var listOption = $("<div class='check-style'><input type='checkbox'/></div>");
-        listOption.attr("value", topping.id);
-        listOption.append("<label>" + topping.topping_name + "</label>");  
-        return listOption;
-    }
-
-    function getExtras() {
-        $.get("/api/extras", renderExtraList)
-   }
-
-    function getSauce() {
-        $.get("/api/sauce", renderSauceList)
-   }
-
-    function getCheese() {
-        $.get("/api/cheese", renderCheeseList)
-   }
-
-    function getVeggies() {
-        $.get("/api/veggies", renderVeggieList)
-   }
-
 
 
 });
