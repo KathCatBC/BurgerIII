@@ -3,11 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
-		<link rel="stylesheet" href="../../public/assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
 
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  		<!-- <script type="text/javascript" src="../../public/getextras.js"></script> -->
-		<script type="text/javascript" src="../../getextras.js"></script>
+		<script type="text/javascript" src="../getextras.js"></script>
 
 
 
@@ -33,25 +32,49 @@
   					<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
 				</div>
 			</div>
-		    <div class="form-group">
-				<label class="col-lg-2 control-label">Patty Style:</label>
-  				<div class="radio col-lg-10 pattyType">
-      				<label> 
-        				<input type="radio" name="optionsRadios" id="optMeat1" value="Beef">
-        				Beef
-      				</label>
-      				<label>
-       					<input type="radio" name="optionsRadios" id="optMeat2" value="Turkey">
-       						Turkey
-   					</label>
-   					<label>
-	     					<input type="radio" name="optionsRadios" id="optMeat3" value="Veggie">
-       						Veggie
-   					</label>
+
+
+<!--  <div class="form-group">
+      <label for="inputPassword" class="col-md-2 control-label">Password</label>
+      <div class="col-md-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Checkbox
+          </label>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+
+			<div class="row">
+				<div fieldset id="group1">
+				    <div class="form-group">
+						<label for="pattyType" class="col-md-2 control-label">Patty Style:</label>
+		  				<div class="radio col-md-10" id="pattyType">
+		      				<label> 
+		        				<input type="radio" name="group1" id="optMeat1" value="Beef">
+		        				Beef
+		      				</label>
+		      				<label>
+		       					<input type="radio" name="group1" id="optMeat2" value="Turkey">
+		       						Turkey
+		   					</label>
+		   					<label>
+			     				<input type="radio" name="group1" id="optMeat3" value="Veggie">
+		       						Veggie
+		   					</label>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class=row>
-				<label for="select" class="col-lg-2 control-label">Number of Patties</label>
+			<div class='row'>
+				<label for="select" class="col-md-2 control-label">Number of Patties:</label>
 				<div class="col-md-2">
 					<select class="form-control" id="numberofPatties">
 						<option value="1">1</option>
@@ -63,113 +86,115 @@
 				</div>
 			</div>
 
-			<div class="form-group row">
-              <label for="inputCheese" class="col-lg-2 control-label">Cheese</label>
-              <div class="col-lg-5">
-              <select multiple="" class="form-control" id="cheese">
-              </select>
-              </div>
-            </div>
+			<br><br>
+			<div class='row'>
+				<div class='col-md-12'>  
+						<div class='row'>
+							<div class='col-md-3'>
+						<!-- <div class="form-group"> -->
+								<div class="panel panel-primary">
+									<div class="panel-heading">Cheese</div>
+									<div class="panel-body">
+			              				<select class="form-control" id="cheese">
+			              				</select>
+		              				</div>
+		              			</div>
+		              		</div>
+			              						
+							<div class='col-md-3'>
+					            <div class="panel panel-danger">
+									<div class="panel-heading">Sauce</div>
+									<div class="panel-body">
+					              		<select class="form-control" id="sauce">
+					              		</select>
+					              </div>
+					            </div>
+					        </div>
 
-            <div class="form-group row">
-              <label for="inputSauce" class="col-lg-2 control-label">Sauce</label>
-              <div class="col-lg-5">
-              <select class="form-control" id="sauce">
-              </select>
-              </div>
-            </div>
+							<div class='col-md-3'>
+					             <div class="panel panel-success">
+									<div class="panel-heading">Veggies</div>
+									<div class="panel-body">
+					              		<select class="form-control" id="veggie">
+					              		</select>
+					              	</div>
+					            </div>
+					       	</div>
+							<div class='col-md-3'>
+					             	<div class="panel panel-info">
+										<div class="panel-heading">Extras</div>
+										<div class="panel-body">
+	              							<div class="checkbox" id="extra">
+	 											<!-- populated by JS -->
+	        								</div>
+	              						</div>
+	            					</div>
+	            				</div>
 
-            <div class="form-group row">
-              <label for="inputMore" class="col-lg-2 control-label">Veggie</label>
-              <div class="col-lg-5">
-              <select class="form-control" id="veggie">
-              </select>
-              </div>
-            </div>
 
-            <div class="form-group row">
-              <label for="inputExtra" class="col-lg-2 control-label">Extra</label>
-              <div class="col-lg-5">
-              <select multiple="" class="form-control" id="extra">
-              </select>
-              </div>
-            </div>
+			       	</div>
+			       </div>
+			    </div>
 
- 			<div class="form-group row">
-				<label class="col-lg-2 control-label">Fries:</label>
-  				<div class="radio col-lg-10 fries">
-      				<label>
-	     				<input type="radio" name="optionsRadios" id="optFry0" value="None">
-       						None
-   					</label>
-      				<label> 
-        				<input type="radio" name="optionsRadios" id="optFry1" value="Small">
-        				Small
-      				</label>
-      				<label>
-       					<input type="radio" name="optionsRadios" id="optFry2" value="Medium">
-       						Medium
-   					</label>
-   					<label>
-	     				<input type="radio" name="optionsRadios" id="optFry3" value="Large">
-       						Large
-   					</label>
+
+			<div class="row">
+				<div fieldset id="group2">
+		 			<div class="form-group">
+						<label class="col-md-2 control-label">Fries:</label>
+		  				<div class="radio col-md-10 fries">
+		      				<label>
+			     				<input type="radio" name="group2" id="optFry0" value="None">
+		       						None
+		   					</label>
+		      				<label> 
+		        				<input type="radio" name="group2" id="optFry1" value="Small">
+		        				Small
+		      				</label>
+		      				<label>
+		       					<input type="radio" name="group2" id="optFry2" value="Medium">
+		       						Medium
+		   					</label>
+		   					<label>
+			     				<input type="radio" name="group2" id="optFry3" value="Large">
+		       						Large
+		   					</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class="form-group">
+					<div fieldset id="group3">
+						<label class="col-md-2 control-label">Drink:</label>
+		  				<div class="radio col-md-10 drinks">
+		      				<label>
+			     				<input type="radio" name="group3" id="optDrink0" value="None">
+		       						None
+		   					</label>
+		      				<label> 
+		        				<input type="radio" name="group3" id="optDrink1" value="Small">
+		        				Small
+		      				</label>
+		      				<label>
+		       					<input type="radio" name="group3" id="optDrink2" value="Medium">
+		       						Medium
+		   					</label>
+		   					<label>
+			     				<input type="radio" name="group3" id="optDrink3" value="Large">
+		       						Large
+		   					</label>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="form-group row">
-				<label class="col-lg-2 control-label">Drink:</label>
-  				<div class="radio col-lg-10 drinks">
-      				<label>
-	     				<input type="radio" name="optionsRadios" id="optDrink0" value="None">
-       						None
-   					</label>
-      				<label> 
-        				<input type="radio" name="optionsRadios" id="optDrink1" value="Small">
-        				Small
-      				</label>
-      				<label>
-       					<input type="radio" name="optionsRadios" id="optDrink2" value="Medium">
-       						Medium
-   					</label>
-   					<label>
-	     				<input type="radio" name="optionsRadios" id="optDrink3" value="Large">
-       						Large
-   					</label>
-				</div>
-			</div>
 
 
 
 
 
 
-
-    	</div> 
-
-    		<!-- 	<div class="form-group">
-        			<div class="checkbox">
-          				<label><input type="checkbox"> Checkbox </label>
-        			</div>
-      			</div>
-    		</div>
-    		    <div class="form-group">
-      <label class="col-lg-2 control-label">Radios</label>
-      <div class="col-lg-10">
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-            Option one is this
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-            Option two can be something else
-          </label>
-        </div>
-      </div>
-    </div> -->
+    
 
 
 				
@@ -194,7 +219,7 @@
 
 
 
-<div class="modal">
+<!-- <div class="modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -208,7 +233,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
