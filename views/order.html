@@ -34,17 +34,7 @@
 			</div>
 
 
-<!--  <div class="form-group">
-      <label for="inputPassword" class="col-md-2 control-label">Password</label>
-      <div class="col-md-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Checkbox
-          </label>
-        </div>
-      </div>
-    </div> -->
+
 
 
 
@@ -57,15 +47,15 @@
 				    <div class="form-group">
 						<label for="pattyType" class="col-md-2 control-label">Patty Style:</label>
 		  				<div class="radio col-md-10" id="pattyType">
-		      				<label> 
+		      				<label class="radio-style"> 
 		        				<input type="radio" name="group1" id="optMeat1" value="Beef">
 		        				Beef
 		      				</label>
-		      				<label>
+		      				<label class="radio-style">
 		       					<input type="radio" name="group1" id="optMeat2" value="Turkey">
 		       						Turkey
 		   					</label>
-		   					<label>
+		   					<label class="radio-style">
 			     				<input type="radio" name="group1" id="optMeat3" value="Veggie">
 		       						Veggie
 		   					</label>
@@ -95,8 +85,9 @@
 								<div class="panel panel-primary">
 									<div class="panel-heading">Cheese</div>
 									<div class="panel-body">
-			              				<select class="form-control" id="cheese">
-			              				</select>
+										<div class="checkbox" id="cheese">
+	 											<!-- populated by JS -->
+	        							</div>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -105,8 +96,9 @@
 					            <div class="panel panel-danger">
 									<div class="panel-heading">Sauce</div>
 									<div class="panel-body">
-					              		<select class="form-control" id="sauce">
-					              		</select>
+					              		<div class="checkbox" id="sauce">
+	 											<!-- populated by JS -->
+	        							</div>
 					              </div>
 					            </div>
 					        </div>
@@ -115,8 +107,9 @@
 					             <div class="panel panel-success">
 									<div class="panel-heading">Veggies</div>
 									<div class="panel-body">
-					              		<select class="form-control" id="veggie">
-					              		</select>
+					              		<div class="checkbox" id="veggie">
+	 											<!-- populated by JS -->
+	        							</div>
 					              	</div>
 					            </div>
 					       	</div>
@@ -142,19 +135,19 @@
 		 			<div class="form-group">
 						<label class="col-md-2 control-label">Fries:</label>
 		  				<div class="radio col-md-10 fries">
-		      				<label>
+		      				<label class="radio-style">
 			     				<input type="radio" name="group2" id="optFry0" value="None">
 		       						None
 		   					</label>
-		      				<label> 
+		      				<label class="radio-style"> 
 		        				<input type="radio" name="group2" id="optFry1" value="Small">
 		        				Small
 		      				</label>
-		      				<label>
+		      				<label class="radio-style">
 		       					<input type="radio" name="group2" id="optFry2" value="Medium">
 		       						Medium
 		   					</label>
-		   					<label>
+		   					<label class="radio-style">
 			     				<input type="radio" name="group2" id="optFry3" value="Large">
 		       						Large
 		   					</label>
@@ -167,19 +160,19 @@
 					<div fieldset id="group3">
 						<label class="col-md-2 control-label">Drink:</label>
 		  				<div class="radio col-md-10 drinks">
-		      				<label>
+		      				<label class="radio-style">
 			     				<input type="radio" name="group3" id="optDrink0" value="None">
 		       						None
 		   					</label>
-		      				<label> 
+		      				<label class="radio-style"> 
 		        				<input type="radio" name="group3" id="optDrink1" value="Small">
 		        				Small
 		      				</label>
-		      				<label>
+		      				<label class="radio-style">
 		       					<input type="radio" name="group3" id="optDrink2" value="Medium">
 		       						Medium
 		   					</label>
-		   					<label>
+		   					<label class="radio-style">
 			     				<input type="radio" name="group3" id="optDrink3" value="Large">
 		       						Large
 		   					</label>
@@ -187,24 +180,6 @@
 					</div>
 				</div>
 			</div>
-
-
-
-
-
-
-
-    
-
-
-				
-	
-
-
-
-
-
-
 
 			<div class=burgerOrder>			
 				<form action="/create" method="POST">
@@ -237,9 +212,7 @@
 
 
 
-			<!-- // Put modal here -->
-			<!-- //  Thank you for your order {name} you order is number {number} -->
-			<!-- order summary (at least number of burgers) -->
+			
 			</div>		
 		</div>
 	</body>

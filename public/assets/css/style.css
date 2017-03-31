@@ -32,3 +32,11 @@
 	margin: 5px 10px 5px 10px;
 	font-size: 15px;
 }
+
+.radio-style {
+	padding-right: 20px;
+}
+
+.check-style {
+	padding-left: 20px;
+}

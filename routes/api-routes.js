@@ -8,14 +8,53 @@ var path = require("path")
 module.exports = function(app) {
   console.log("apiroutes.js function")
   // know that api routes is loaded & working
-    app.get("/api/extras", function(req, res) {
+
+
+
+  app.get("/api/extras", function(req, res) {
     db.Topping.findAll({
       where: {topping_type: "extra"}
-    }).then(function(dbTop) {
+    }).then(function(dbExtra) {
       // console.log(dbTop)
-      res.json(dbTop);
+      res.json(dbExtra);
     });
   });
+
+
+  app.get("/api/sauce", function(req, res) {
+    db.Topping.findAll({
+      where: {topping_type: "sauce"}
+    }).then(function(dbSauce) {
+      // console.log(dbTop)
+      res.json(dbSauce);
+    });
+  });
+
+
+  app.get("/api/veggies", function(req, res) {
+    db.Topping.findAll({
+      where: {topping_type: "veggie"}
+    }).then(function(dbVeggie) {
+      // console.log(dbTop)
+      res.json(dbVeggie);
+    });
+  });
+
+
+  app.get("/api/cheese", function(req, res) {
+    db.Topping.findAll({
+      where: {topping_type: "cheese"}
+    }).then(function(dbCheese) {
+      // console.log(dbTop)
+      res.json(dbCheese);
+    });
+  });
+
+
+
+
+
+
 
 }
 
